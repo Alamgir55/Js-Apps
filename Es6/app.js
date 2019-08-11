@@ -58,12 +58,12 @@
 //     console.log(`${i}: ${myObj[i]}`);
 // }
 
-let a, b;
-[a, b] = [100, 200];
-[a, b, c, ...rest] = [500, 300, 20, 10, 42];
-//console.log(rest);
+// let a, b;
+// [a, b] = [100, 200];
+// [a, b, c, ...rest] = [500, 300, 20, 10, 42];
+// //console.log(rest);
 
-({a, b, ...rest} = {a:100, b:500, c:400, d:800});
+// ({a, b, ...rest} = {a:100, b:500, c:400, d:800});
 
 //console.log(rest);
 
@@ -91,15 +91,15 @@ let a, b;
 // console.log(name, age, passinate);
 // sayHello();
 
-const map1 = new Map();
+// const map1 = new Map();
 
-const key1 = 'SOme String',
-      key2 = {},
-      key3 = function(){};
+// const key1 = 'SOme String',
+//       key2 = {},
+//       key3 = function(){};
 
-map1.set(key1, 'Another valu1');
-map1.set(key2, 'Another valu2');
-map1.set(key3, 'Another valu3');
+// map1.set(key1, 'Another valu1');
+// map1.set(key2, 'Another valu2');
+// map1.set(key3, 'Another valu3');
 
 // console.log(map1.get(key1), map1.get(key2), map1.get(key3));
 
@@ -125,22 +125,62 @@ map1.set(key3, 'Another valu3');
 // const valArray = Array.from(map1.keys());
 // console.log(valArray);
 
-const set1 = new Set();
-set1.add(100);
-set1.add('A String');
-set1.add({name: 'John'});
-set1.add(true);
-set1.add(110);
-set1.add(100);
+// const set1 = new Set();
+// set1.add(100);
+// set1.add('A String');
+// set1.add({name: 'John'});
+// set1.add(true);
+// set1.add(110);
+// set1.add(100);
 
-const set2 = new Set([1, true, 'String']);
+// const set2 = new Set([1, true, 'String']);
 
-// console.log(set1.size);
-// console.log(set1.has(100));
-set1.delete(100);
-//console.log(set1);
-// for(let item of set1){
-//     console.log(item);
+// // console.log(set1.size);
+// // console.log(set1.has(100));
+// set1.delete(100);
+// //console.log(set1);
+// // for(let item of set1){
+// //     console.log(item);
+// // }
+// const setArr = Array(set1);
+// console.log(setArr);
+
+const companies = [
+    {name: "Company One", category: 'Finance', start: 1981, end: 2003},
+    {name: "Company Two", category: 'Retail', start: 1992, end: 2008},
+    {name: "Company Three", category: 'Auto', start: 1999, end: 2007},
+    {name: "Company Four", category: 'Retail', start: 1989, end: 2010},
+    {name: "Company Five", category: 'Finance', start: 1987, end: 2015},
+    {name: "Company Six", category: 'Technology', start: 1986, end: 2016}
+];
+
+const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
+
+// for(let i = 0; i < companies.length; i++){
+//     console.log(companies[i]);
 // }
-const setArr = Array(set1);
-console.log(setArr);
+
+// companies.forEach(function(comp){
+//     console.log(comp.name);
+// });
+// let canDrink = [];
+
+// for(let i = 0; i <= ages.length; i++){
+//     if(ages[i] >= 21){
+//         canDrink.push(ages[i]);
+//     }
+// }
+
+// const canDrink = ages.filter(function(age){
+//     if(age >= 21){
+//         return true;
+//     }
+// });
+//console.log(canDrink);
+
+const retailCompanies = companies.filter(function(company){
+    if(company.category === 'Retail'){
+        return true;
+    }
+});
+console.log(retailCompanies);
