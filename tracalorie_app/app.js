@@ -48,10 +48,11 @@ const ItemCtrl = (function(){
             return found;
         },
         setCurrentItem: function(item){
-            data.currentItem = item;
+           data.currentItem = item;
         },
         getCurrentItem: function(){
             return data.currentItem;
+            //onsole.log(data.currentItem);
         },
         getTotalCalories: function(){
             let total = 0;
@@ -119,7 +120,7 @@ const UICtrl = (function(){
         }, 
         clearInput: function(){
             document.querySelector(UISelectors.itemNameInput).value = '';
-            document.querySelector(UISelectors.itemCaloriesInput). value = '';
+            document.querySelector(UISelectors.itemCaloriesInput).value = '';
         },
         addItemToForm: function(){
             document.querySelector(UISelectors.itemNameInput).value = ItemCtrl.getCurrentItem().name;
@@ -140,7 +141,7 @@ const UICtrl = (function(){
             document.querySelector(UISelectors.addBtn).style.display = 'inline';
         },
         showEditState: function(){
-            UICtrl.clearInput();
+            //UICtrl.clearInput();
             document.querySelector(UISelectors.updateBtn).style.display = 'inline';
             document.querySelector(UISelectors.deleteBtn).style.display = 'inline';
             document.querySelector(UISelectors.backBtn).style.display = 'inline';
